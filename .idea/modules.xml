@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PBO-Ternak-Lele.iml" filepath="$PROJECT_DIR$/.idea/PBO-Ternak-Lele.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PBO-Ternak-Lele.iml" filepath="$PROJECT_DIR$/PBO-Ternak-Lele.iml" />
     </modules>
   </component>
 </project>
