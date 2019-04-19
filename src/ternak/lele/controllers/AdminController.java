@@ -15,8 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -32,12 +30,11 @@ public class AdminController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        loadPanel("Dashboard");
     }
 
     @FXML
     private void changeDashboardPanel(ActionEvent event){
-        System.out.println("CHANGE DASHBOARD");
         loadPanel("Dashboard");
     }
 
@@ -52,13 +49,28 @@ public class AdminController implements Initializable {
     }
 
     @FXML
+    private void logout(ActionEvent event){
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     private void changePenjualanPanel(ActionEvent event){
         loadPanel("Penjualan");
     }
 
     private void loadPanel(String panel){
-        panel = "../views/pemilik/" + panel + ".fxml";
-        System.out.println(panel);
+        panel = "./../views/pemilik/" + panel + ".fxml";
 
         Parent root = null;
         try {

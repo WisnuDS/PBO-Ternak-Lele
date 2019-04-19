@@ -51,7 +51,7 @@
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton prefHeight="50.0" prefWidth="150.0" text="Logout" textFill="WHITE">
+            <JFXButton onAction="#logout" prefHeight="50.0" prefWidth="150.0" text="Logout" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
