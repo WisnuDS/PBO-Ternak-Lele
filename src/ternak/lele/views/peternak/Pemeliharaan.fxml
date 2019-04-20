@@ -5,7 +5,6 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTimePicker?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
@@ -56,10 +55,10 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
                         <Pane layoutX="31.0" layoutY="165.0" prefHeight="50.0" prefWidth="580.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
@@ -69,10 +68,10 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
                         <Pane layoutX="31.0" layoutY="225.0" prefHeight="50.0" prefWidth="580.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
@@ -82,7 +81,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXTextField editable="false" layoutX="443.0" layoutY="13.0" prefHeight="25.0" prefWidth="79.0" />
+                              <JFXTextField layoutX="443.0" layoutY="13.0" prefHeight="25.0" prefWidth="79.0" />
                               <Label layoutX="538.0" layoutY="16.0" text="Ekor">
                                  <font>
                                     <Font size="14.0" />
@@ -97,9 +96,14 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="507.0" layoutY="16.0" text="Sudah" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="507.0" layoutY="16.0" text="Sudah" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
+                        <JFXButton layoutX="529.0" layoutY="367.0" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
                      </children>
                   </AnchorPane>
                </content></Tab>
@@ -129,10 +133,10 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
                         <Pane layoutX="31.0" layoutY="165.0" prefHeight="50.0" prefWidth="580.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
@@ -142,10 +146,10 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
                         <Pane layoutX="31.0" layoutY="225.0" prefHeight="50.0" prefWidth="580.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
@@ -155,7 +159,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXTextField editable="false" layoutX="443.0" layoutY="13.0" prefHeight="25.0" prefWidth="79.0" />
+                              <JFXTextField layoutX="443.0" layoutY="13.0" prefHeight="25.0" prefWidth="79.0" />
                               <Label layoutX="538.0" layoutY="16.0" text="Ekor">
                                  <font>
                                     <Font size="14.0" />
@@ -170,9 +174,14 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="507.0" layoutY="16.0" text="Sudah" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="507.0" layoutY="16.0" text="Sudah" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
+                        <JFXButton layoutX="529.0" layoutY="367.0" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
                      </children>
                   </AnchorPane>
                </content>
@@ -203,10 +212,10 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
                         <Pane layoutX="31.0" layoutY="165.0" prefHeight="50.0" prefWidth="580.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
@@ -216,10 +225,10 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="330.0" layoutY="16.0" text="Pagi" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="385.0" layoutY="16.0" text="Siang" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="448.0" layoutY="16.0" text="Sore" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="505.0" layoutY="16.0" text="Malam" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
                         <Pane layoutX="31.0" layoutY="225.0" prefHeight="50.0" prefWidth="580.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
@@ -229,7 +238,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXTextField editable="false" layoutX="443.0" layoutY="13.0" prefHeight="25.0" prefWidth="79.0" />
+                              <JFXTextField layoutX="443.0" layoutY="13.0" prefHeight="25.0" prefWidth="79.0" />
                               <Label layoutX="538.0" layoutY="16.0" text="Ekor">
                                  <font>
                                     <Font size="14.0" />
@@ -244,64 +253,10 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <JFXCheckBox checkedColor="#41545e" disable="true" layoutX="507.0" layoutY="16.0" text="Sudah" unCheckedColor="#41545e" />
+                              <JFXCheckBox checkedColor="#41545e" layoutX="507.0" layoutY="16.0" text="Sudah" unCheckedColor="#41545e" />
                            </children>
                         </Pane>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="Jadwal">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Pane layoutX="31.0" layoutY="24.0" prefHeight="58.0" prefWidth="178.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
-                           <children>
-                              <JFXComboBox layoutX="108.0" layoutY="17.0" />
-                              <Label layoutX="14.0" layoutY="19.0" text="Pilih Kolam :">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </Pane>
-                        <Pane layoutX="31.0" layoutY="102.0" prefHeight="140.0" prefWidth="580.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
-                           <children>
-                              <Label layoutX="222.0" layoutY="14.0" text="Pemberian Makan">
-                                 <font>
-                                    <Font name="System Bold" size="16.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="80.0" layoutY="62.0" text="Mulai" />
-                              <Label layoutX="452.0" layoutY="62.0" text="Selesai" />
-                              <JFXTimePicker defaultColor="#41545e" layoutX="24.0" layoutY="84.0" />
-                              <JFXTimePicker defaultColor="#41545e" layoutX="402.0" layoutY="84.0" />
-                           </children>
-                        </Pane>
-                        <Pane layoutX="433.0" layoutY="24.0" prefHeight="58.0" prefWidth="178.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
-                           <children>
-                              <JFXComboBox layoutX="108.0" layoutY="17.0" />
-                              <Label layoutX="14.0" layoutY="19.0" text="Pilih Waktu :">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </Pane>
-                        <Pane layoutX="31.0" layoutY="260.0" prefHeight="140.0" prefWidth="580.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
-                           <children>
-                              <Label layoutX="229.0" layoutY="14.0" text="Pemberian Obat">
-                                 <font>
-                                    <Font name="System Bold" size="16.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="80.0" layoutY="62.0" text="Mulai" />
-                              <Label layoutX="452.0" layoutY="62.0" text="Selesai" />
-                              <JFXTimePicker defaultColor="#41545e" layoutX="24.0" layoutY="84.0" />
-                              <JFXTimePicker defaultColor="#41545e" layoutX="402.0" layoutY="84.0" />
-                           </children>
-                        </Pane>
-                        <JFXButton layoutX="529.0" layoutY="422.0" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Ubah" textFill="WHITE">
+                        <JFXButton layoutX="529.0" layoutY="367.0" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Submit" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

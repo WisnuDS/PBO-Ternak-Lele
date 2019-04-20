@@ -5,9 +5,6 @@
  */
 package ternak.lele.controllers;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,12 +15,16 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 /**
  * FXML Controller class
  *
  * @author fian
  */
-public class AdminController implements Initializable {
+public class PeternakController implements Initializable {
 
     @FXML
     private BorderPane mainParent;
@@ -36,11 +37,6 @@ public class AdminController implements Initializable {
     @FXML
     private void changeDashboardPanel(ActionEvent event){
         loadPanel("Dashboard");
-    }
-
-    @FXML
-    private void changePembelianPanel(ActionEvent event){
-        loadPanel("Pembelian");
     }
 
     @FXML
@@ -64,13 +60,8 @@ public class AdminController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    private void changePenjualanPanel(ActionEvent event){
-        loadPanel("Penjualan");
-    }
-
     private void loadPanel(String panel){
-        panel = "./../views/pemilik/" + panel + ".fxml";
+        panel = "./../views/peternak/" + panel + ".fxml";
 
         Parent root = null;
         try {
