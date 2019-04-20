@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox prefHeight="49.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
+      <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
          <children>
             <Label prefHeight="59.0" prefWidth="668.0" text="Dashboard Peternak Lele" textFill="WHITE">
                <padding>

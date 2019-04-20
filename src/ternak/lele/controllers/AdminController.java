@@ -55,7 +55,7 @@ public class AdminController implements Initializable {
 
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../views/Lyaogin.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
