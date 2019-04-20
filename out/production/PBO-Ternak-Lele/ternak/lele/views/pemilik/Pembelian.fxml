@@ -24,7 +24,7 @@
             </Label>
          </children>
       </HBox>
-      <JFXTabPane layoutY="50.0" pickOnBounds="false" prefHeight="550.0" prefWidth="650.0" style="-fx-background-color: -fx-background-color: #41545e;" tabMaxWidth="0.0">
+      <JFXTabPane layoutY="50.0" pickOnBounds="false" prefHeight="550.0" prefWidth="650.0" tabMaxWidth="0.0">
          <tabs>
             <Tab text="Pembelian Bibit">
                <content>
