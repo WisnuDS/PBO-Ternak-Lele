@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="mainParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ternak.lele.controllers.AdminController">
+<BorderPane fx:id="mainParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ternak.lele.controllers.AdminController">
    <left>
-      <VBox prefHeight="600.0" prefWidth="150.0" style="-fx-background-color: #9D513D;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #324047;" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton onAction="#changeDashboardPanel" prefHeight="50.0" prefWidth="150.0" text="Dashboard" textFill="WHITE">
+            <Pane prefHeight="151.0" prefWidth="180.0" />
+            <JFXButton alignment="BASELINE_LEFT" onAction="#changeDashboardPanel" prefHeight="50.0" prefWidth="213.0" text=" Dashboard" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -18,10 +22,16 @@
                   <Insets />
                </VBox.margin>
                <font>
-                  <Font size="18.0" />
+                  <Font size="14.0" />
                </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="16" />
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </JFXButton>
-            <JFXButton onAction="#changePembelianPanel" prefHeight="50.0" prefWidth="150.0" text="Pembelian" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" onAction="#changePembelianPanel" prefHeight="50.0" prefWidth="237.0" text=" Pembelian" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -29,10 +39,16 @@
                   <Insets />
                </VBox.margin>
                <font>
-                  <Font size="18.0" />
+                  <Font size="14.0" />
                </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" size="16" />
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </JFXButton>
-            <JFXButton onAction="#changePemeliharaanPanel" prefHeight="50.0" prefWidth="150.0" text="Pemeliharaan" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" onAction="#changePemeliharaanPanel" prefHeight="50.0" prefWidth="264.0" text="Pemeliharaan" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -40,24 +56,42 @@
                   <Insets />
                </VBox.margin>
                <font>
-                  <Font size="18.0" />
+                  <Font size="14.0" />
                </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="FISH" size="18" />
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </JFXButton>
-            <JFXButton onAction="#changePenjualanPanel" prefHeight="50.0" prefWidth="150.0" text="Penjualan" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" onAction="#changePenjualanPanel" prefHeight="50.0" prefWidth="235.0" text=" Penjualan" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <font>
-                  <Font size="18.0" />
+                  <Font size="14.0" />
                </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="16" />
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </JFXButton>
-            <JFXButton onAction="#logout" prefHeight="50.0" prefWidth="150.0" text="Logout" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" onAction="#logout" prefHeight="50.0" prefWidth="254.0" text=" Logout" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <font>
-                  <Font size="18.0" />
+                  <Font size="14.0" />
                </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="LOGOUT" size="16" />
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </JFXButton>
          </children>
       </VBox>
