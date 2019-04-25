@@ -39,7 +39,7 @@
             </AreaChart>
          </children>
       </VBox>
-      <HBox layoutX="25.0" layoutY="347.0" prefHeight="166.0" prefWidth="600.0">
+      <HBox layoutX="25.0" layoutY="347.0" prefHeight="91.0" prefWidth="600.0">
          <children>
             <VBox prefHeight="166.0" prefWidth="180.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
                <HBox.margin>
@@ -54,6 +54,11 @@
                         <Insets />
                      </VBox.margin>
                   </Label>
+                  <Label fx:id="ikanHidupLabel" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="123 ekor">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
@@ -66,6 +71,11 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
+                  <Label fx:id="ikanHidupLabel1" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="123 ekor">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
@@ -76,6 +86,11 @@
                   <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Pakan" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ikanHidupLabel2" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text=" q ">
+                     <font>
+                        <Font size="22.0" />
                      </font>
                   </Label>
                </children>

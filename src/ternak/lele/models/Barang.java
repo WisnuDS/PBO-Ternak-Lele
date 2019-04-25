@@ -5,10 +5,9 @@ public class Barang {
     private String namaBarang;
     private int hargaBarang;
 
-    public Barang(int id, String namaBarang, int hargaBarang) {
+    public Barang(int id, String namaBarang) {
         this.id = id;
         this.namaBarang = namaBarang;
-        this.hargaBarang = hargaBarang;
     }
 
     public int getId() {
