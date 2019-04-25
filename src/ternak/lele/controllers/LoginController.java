@@ -23,6 +23,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import ternak.lele.helpers.DBConnection;
 import ternak.lele.models.User;
@@ -36,6 +37,13 @@ public class LoginController implements Initializable {
     private Connection connection = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
+
+    @FXML
+    private BorderPane mainParent;
+
+    public LoginController() {
+
+    }
 
     @FXML
     private JFXTextField usernameField;
@@ -104,6 +112,7 @@ public class LoginController implements Initializable {
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
     
