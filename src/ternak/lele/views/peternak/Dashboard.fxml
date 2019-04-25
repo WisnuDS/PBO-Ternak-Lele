@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
+         <children>
+            <Label prefHeight="59.0" prefWidth="668.0" text="Dashboard Peternak Lele" textFill="WHITE">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="25.0" layoutY="105.0" prefHeight="413.0" prefWidth="600.0" style="-fx-background-color: #fafafa; -fx-background-radius: 10;">
+         <children>
+            <JFXTreeTableView prefHeight="460.0" prefWidth="600.0">
+               <columns>
+                  <TreeTableColumn prefWidth="42.0" text="No" />
+                  <TreeTableColumn prefWidth="203.0" text="Kegiatan" />
+                  <TreeTableColumn prefWidth="115.0" text="Kolam" />
+                  <TreeTableColumn prefWidth="127.0" text="Mulai" />
+                  <TreeTableColumn prefWidth="112.0" text="Selesai" />
+               </columns>
+            </JFXTreeTableView>
+         </children>
+      </VBox>
+      <Label layoutX="266.0" layoutY="70.0" text="Daftar Kegiatan">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

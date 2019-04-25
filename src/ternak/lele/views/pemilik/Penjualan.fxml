@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
+         <children>
+            <Label prefHeight="50.0" prefWidth="650.0" text="Penjualan" textFill="WHITE">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Pane layoutY="50.0" prefHeight="550.0" prefWidth="650.0">
+         <children>
+            <JFXTextField layoutX="90.0" layoutY="182.0" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Ikan">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="234.0" layoutY="25.0" text="Penjualan Ikan Lele">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="90.0" layoutY="243.0" prefHeight="25.0" prefWidth="469.0" promptText="Harga / ekor">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="90.0" layoutY="307.0" text="Total Pembelian Bibit : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="307.0" text="Rp -">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="470.0" layoutY="374.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #41545e;" text="Done" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox layoutX="504.0" layoutY="120.0" />
+            <Label layoutX="91.0" layoutY="123.0" text="Nomor Kolam :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
