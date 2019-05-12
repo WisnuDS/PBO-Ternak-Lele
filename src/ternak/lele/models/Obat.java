@@ -1,11 +1,11 @@
 package ternak.lele.models;
 
-public class Obat extends Barang{
+public class Obat extends Barang {
 
     private int jumlahObat;
 
-    public Obat(int id, String namaBarang) {
-        super(id, namaBarang);
+    public Obat(int id, String namaBarang, int hargaBarang) {
+        super(id, namaBarang, hargaBarang);
     }
 
     public int getJumlahObat() {

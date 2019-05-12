@@ -1,11 +1,11 @@
 package ternak.lele.models;
 
-public class Pakan extends Barang{
+public class Pakan extends Barang {
 
     int jumlahPakan;
 
-    public Pakan(int id, String namaBarang) {
-        super(id, namaBarang);
+    public Pakan(int id, String namaBarang, int hargaBarang) {
+        super(id, namaBarang, hargaBarang);
         this.jumlahPakan = 0;
     }
 
