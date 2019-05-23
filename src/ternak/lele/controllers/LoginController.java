@@ -58,23 +58,23 @@ public class LoginController implements Initializable {
 
 //        int aktor = getLoginAktor(username, password);
 
-        int aktor = User.getLoginValue(connection, preparedStatement, resultSet, username, password);
-
-        System.out.println(aktor);
-
-        if(aktor == 1){
-            changePage(event, "pemilik");
-        } else if (aktor == 2){
-            changePage(event, "peternak");
-        } else {
-            System.out.println("Username dan password salah");
-        }
-
-//        if(username.equals("pemilik")){
+//        int aktor = User.getLoginValue(connection, preparedStatement, resultSet, username, password);
+//
+//        System.out.println(aktor);
+//
+//        if(aktor == 1){
 //            changePage(event, "pemilik");
-//        } else {
+//        } else if (aktor == 2){
 //            changePage(event, "peternak");
+//        } else {
+//            System.out.println("Username dan password salah");
 //        }
+
+        if(username.equals("pemilik")){
+            changePage(event, "pemilik");
+        } else {
+            changePage(event, "peternak");
+        }
     }
 
 //    private int getLoginAktor(String username, String password){

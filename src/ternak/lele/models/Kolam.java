@@ -1,6 +1,8 @@
 package ternak.lele.models;
 
-public class Kolam {
+import ternak.lele.controllers.LoginController;
+
+public class Kolam extends LoginController {
     private int idKolam;
     private int hari;
     private boolean[] pemberianMakan;

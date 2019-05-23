@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="76.0" y="0.0">ternak.lele.models.Level</node>
+    <node x="71.5" y="400.0">ternak.lele.models.Transaksi</node>
+    <node x="305.0" y="400.0">ternak.lele.controllers.LoginController</node>
+    <node x="0.0" y="164.0">ternak.lele.models.Peternak</node>
+    <node x="132.0" y="164.0">ternak.lele.models.Pemilik</node>
+    <node x="338.0" y="482.0">ternak.lele.models.Kolam</node>
+    <node x="0.0" y="323.0">ternak.lele.models.Pakan</node>
+    <node x="112.0" y="323.0">ternak.lele.models.Obat</node>
+    <node x="0.0" y="482.0">ternak.lele.models.Penjualan</node>
+    <node x="78.5" y="82.0">ternak.lele.models.User</node>
+    <node x="138.0" y="482.0">ternak.lele.models.Pembelian</node>
+    <node x="217.0" y="323.0">ternak.lele.models.Lele</node>
+    <node x="104.5" y="241.0">ternak.lele.models.Barang</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ternak.lele.models.Kolam" target="ternak.lele.controllers.LoginController">
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
+    </edge>
+    <edge source="ternak.lele.models.Pembelian" target="ternak.lele.models.Transaksi">
+      <point x="0.0" y="-16.0" />
+      <point x="199.0" y="457.0" />
+      <point x="157.75" y="457.0" />
+      <point x="28.75" y="16.0" />
+    </edge>
+    <edge source="ternak.lele.models.Penjualan" target="ternak.lele.models.Transaksi">
+      <point x="0.0" y="-16.0" />
+      <point x="59.0" y="457.0" />
+      <point x="100.25" y="457.0" />
+      <point x="-28.75" y="16.0" />
+    </edge>
+    <edge source="ternak.lele.models.User" target="ternak.lele.models.Level">
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
+    </edge>
+    <edge source="ternak.lele.models.Obat" target="ternak.lele.models.Barang">
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
+    </edge>
+    <edge source="ternak.lele.models.Pemilik" target="ternak.lele.models.User">
+      <point x="0.0" y="-16.0" />
+      <point x="182.0" y="139.0" />
+      <point x="139.25" y="139.0" />
+      <point x="20.25" y="16.0" />
+    </edge>
+    <edge source="ternak.lele.models.Lele" target="ternak.lele.models.Barang">
+      <point x="0.0" y="-16.0" />
+      <point x="256.0" y="298.0" />
+      <point x="187.83333333333334" y="298.0" />
+      <point x="33.33333333333334" y="16.0" />
+    </edge>
+    <edge source="ternak.lele.models.Pakan" target="ternak.lele.models.Barang">
+      <point x="0.0" y="-16.0" />
+      <point x="46.0" y="298.0" />
+      <point x="121.16666666666666" y="298.0" />
+      <point x="-33.33333333333334" y="16.0" />
+    </edge>
+    <edge source="ternak.lele.models.Peternak" target="ternak.lele.models.User">
+      <point x="0.0" y="-16.0" />
+      <point x="56.0" y="139.0" />
+      <point x="98.75" y="139.0" />
+      <point x="-20.25" y="16.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8017130620985009" x="543.4419877747355" y="530.7447416065974" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

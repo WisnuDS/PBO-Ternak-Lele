@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
          <children>
@@ -88,7 +88,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ikanHidupLabel2" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text=" q ">
+                  <Label fx:id="ikanHidupLabel2" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="12 kg">
                      <font>
                         <Font size="22.0" />
                      </font>
