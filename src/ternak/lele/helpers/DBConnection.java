@@ -6,12 +6,17 @@ import java.sql.SQLException;
 
 public class DBConnection {
     Connection connection = null;
+    public static final String DBMS = "mysql";
+    public static final String HOST = "128.199.196.208";
+    public static final String USERNAME = "miqdad";
+    public static final String PASSWORD = "monalisa123";
+    public static final String DATABASE = "ternak_lele";
 
     public static Connection connectDB(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url ="jdbc:mysql://ternak-lele.mysql.database.azure.com:3306/ternak_lele?useSSL=true&requireSSL=false";
-            Connection conn = DriverManager.getConnection(url, "miqdadyyy@ternak-lele", "Monalisa123");
+            String url = String.format("jdbc:%s://%s/%s", DBMS, HOST, DATABASE);
+            Connection conn = DriverManager.getConnection(url, USERNAME, PASSWORD);
             return conn;
         } catch (ClassNotFoundException e) {
             return null;

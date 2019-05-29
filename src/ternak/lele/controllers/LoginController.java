@@ -25,6 +25,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import ternak.lele.helpers.Config;
 import ternak.lele.helpers.DBConnection;
 import ternak.lele.models.User;
 
@@ -59,21 +60,16 @@ public class LoginController implements Initializable {
 //        int aktor = getLoginAktor(username, password);
 
 //        int aktor = User.getLoginValue(connection, preparedStatement, resultSet, username, password);
-//
-//        System.out.println(aktor);
-//
-//        if(aktor == 1){
-//            changePage(event, "pemilik");
-//        } else if (aktor == 2){
-//            changePage(event, "peternak");
-//        } else {
-//            System.out.println("Username dan password salah");
-//        }
+        int aktor = User.getLoginValue(username, password);
 
-        if(username.equals("pemilik")){
+        System.out.println(aktor);
+
+        if(aktor == 1){
             changePage(event, "pemilik");
-        } else {
+        } else if (aktor == 2){
             changePage(event, "peternak");
+        } else {
+            System.out.println("Username dan password salah");
         }
     }
 
@@ -119,7 +115,7 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        connection = DBConnection.connectDB();
+        Config.connection = DBConnection.connectDB();
     }
     
 }

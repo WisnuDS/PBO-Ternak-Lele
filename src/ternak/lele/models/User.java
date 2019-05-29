@@ -1,16 +1,32 @@
 package ternak.lele.models;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import ternak.lele.helpers.DBHelper;
 
-public class User extends Level{
+import java.sql.*;
+
+public class User{
+    private int idUser;
     private String username;
     private String password;
 
-    public User(int idLevel, String level) {
-        super(idLevel, level);
+    private int idLevel;
+    private String level;
+
+    public static int getLoginValue(String username, String password){
+        username = username.replaceAll("'", "").replaceAll(" ", "");
+        password = password.replaceAll("'", "").replaceAll(" ", "");
+        ResultSet resultSet = DBHelper.selectAll("users", String.format("username = '%s' and password = '%s'", username, password));
+        try {
+            if(!resultSet.next()){
+                return 0;
+            } else {
+                return resultSet.getInt("id_level");
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return 0;
     }
 
     public static int getLoginValue(Connection connection, PreparedStatement preparedStatement, ResultSet resultSet, String username, String password){
