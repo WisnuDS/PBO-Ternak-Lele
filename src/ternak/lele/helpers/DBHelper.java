@@ -14,7 +14,16 @@ public class DBHelper {
 
     public static ResultSet selectAll(String table, String requirment){
         String sql = String.format("SELECT * FROM %s WHERE %s", table, requirment);
-        System.out.println(sql);
+        return getResultSet(sql);
+    }
+
+    public static ResultSet selectAll(String table, String joinTable, String foreignKey){
+        String sql = String.format("SELECT * FROM %s JOIN %s ON %s.%s = %s.id", table, joinTable, table, foreignKey, joinTable);
+        return getResultSet(sql);
+    }
+
+    public static ResultSet selectAll(String table, String requirment, String joinTable, String foreignKey){
+        String sql = String.format("SELECT * FROM %s JOIN %s ON %s.%s = %s.id WHERE %s", table, joinTable, table, foreignKey, joinTable, requirment);
         return getResultSet(sql);
     }
 
@@ -37,6 +46,7 @@ public class DBHelper {
     }
 
     private static ResultSet getResultSet(String sql) {
+        System.out.println(sql);
         ResultSet resultSet = null;
         try {
             Statement statement = Config.connection.createStatement();

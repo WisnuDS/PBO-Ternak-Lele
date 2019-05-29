@@ -13,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import com.google.gson.Gson;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -27,6 +28,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import ternak.lele.helpers.Config;
 import ternak.lele.helpers.DBConnection;
+import ternak.lele.models.Kolam;
+import ternak.lele.models.Pemeliharaan;
 import ternak.lele.models.User;
 
 /**
@@ -61,6 +64,7 @@ public class LoginController implements Initializable {
 
 //        int aktor = User.getLoginValue(connection, preparedStatement, resultSet, username, password);
         int aktor = User.getLoginValue(username, password);
+        User.getUser(1);
 
         System.out.println(aktor);
 
@@ -116,6 +120,8 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         Config.connection = DBConnection.connectDB();
+        Gson gson = new Gson();
+//        System.out.println(gson.toJson(Pemeliharaan.getPemeliharaanById(1)));
     }
     
 }
