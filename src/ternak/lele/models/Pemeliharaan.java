@@ -44,7 +44,6 @@ public class Pemeliharaan {
                 boolean[] pemberianObat_ = GeneralHelper.getBooleanArrayFromJson(data, "pemberian_obat");
                 int ikanMati_ = resultSet.getInt("ikan_mati");
                 boolean pembersihan_ = resultSet.getBoolean("pembersihan");
-                System.out.println("test");
                 pemeliharaan = new Pemeliharaan(id_, idKolam_, hari_, pemberianMakan_, pemberianObat_, ikanMati_, pembersihan_);
             }
         } catch (Exception e){

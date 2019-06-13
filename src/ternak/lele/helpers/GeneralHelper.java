@@ -55,4 +55,13 @@ public class GeneralHelper {
 
         return data;
     }
+
+    public static boolean isNumeric(String s){
+        try {
+            Integer.parseInt(s);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+    }
 }

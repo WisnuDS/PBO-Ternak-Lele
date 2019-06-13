@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
@@ -11,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" stylesheets="@../assets/pembelian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" stylesheets="@../assets/pembelian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ternak.lele.controllers.PembelianController">
    <children>
       <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
          <children>
@@ -31,7 +30,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="650.0">
                      <children>
-                        <JFXTextField fx:id="jumlahField" layoutX="91.0" layoutY="145.0" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Bibit">
+                        <JFXTextField fx:id="jumlahField" layoutX="91.0" layoutY="145.0" onKeyReleased="#updateTotalPembelianBibit" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Bibit">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -41,7 +40,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <JFXTextField fx:id="hargaField" layoutX="91.0" layoutY="200.0" prefHeight="25.0" prefWidth="469.0" promptText="Harga / Bibit">
+                        <JFXTextField fx:id="hargaField" layoutX="91.0" layoutY="200.0" onKeyReleased="#updateTotalPembelianBibit" prefHeight="25.0" prefWidth="469.0" promptText="Harga / Bibit">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -56,17 +55,11 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <JFXButton fx:id="buttonDoneBibit" layoutX="460.0" layoutY="354.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #41545e;" text="Done" textFill="WHITE">
+                        <JFXButton fx:id="buttonDoneBibit" layoutX="460.0" layoutY="354.0" onAction="#pembelianBibitAction" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #41545e;" text="Done" textFill="WHITE">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </JFXButton>
-                        <JFXComboBox layoutX="504.0" layoutY="103.0" />
-                        <Label layoutX="91.0" layoutY="106.0" text="Kolam">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
                      </children>
                   </AnchorPane>
                </content>
@@ -75,7 +68,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <JFXTextField fx:id="jumlahPakanField" layoutX="91.0" layoutY="82.0" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Pakan">
+                        <JFXTextField fx:id="jumlahPakanField" layoutX="91.0" layoutY="82.0" onKeyReleased="#updateTotalPembelianPakan" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Pakan">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -85,17 +78,17 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <JFXTextField fx:id="hargaPakanField" layoutX="92.0" layoutY="137.0" prefHeight="25.0" prefWidth="469.0" promptText="Harga Pakan / KG">
+                        <JFXTextField fx:id="hargaPakanField" layoutX="92.0" layoutY="137.0" onKeyReleased="#updateTotalPembelianPakan" prefHeight="25.0" prefWidth="469.0" promptText="Harga Pakan / KG">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="jumlahObatField" layoutX="92.0" layoutY="202.0" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Obat">
+                        <JFXTextField fx:id="jumlahObatField" layoutX="92.0" layoutY="202.0" onKeyReleased="#updateTotalPembelianPakan" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Obat">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="hargaObatField" layoutX="91.0" layoutY="256.0" prefHeight="25.0" prefWidth="469.0" promptText="Harga Obat / KG">
+                        <JFXTextField fx:id="hargaObatField" layoutX="91.0" layoutY="256.0" onKeyReleased="#updateTotalPembelianPakan" prefHeight="25.0" prefWidth="469.0" promptText="Harga Obat / KG">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -110,7 +103,7 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <JFXButton fx:id="buttonDonePakan" layoutX="466.0" layoutY="394.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #41545e;" text="Done" textFill="WHITE">
+                        <JFXButton fx:id="buttonDonePakan" layoutX="466.0" layoutY="394.0" onAction="#pembelianPakanAction" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #41545e;" text="Done" textFill="WHITE">
                            <font>
                               <Font size="16.0" />
                            </font>

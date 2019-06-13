@@ -120,7 +120,6 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         Config.connection = DBConnection.connectDB();
-        Gson gson = new Gson();
 //        System.out.println(gson.toJson(Pemeliharaan.getPemeliharaanById(1)));
     }
     
