@@ -1,20 +1,62 @@
 package ternak.lele.models;
 
-public class Kolam {
-    private int idKolam;
-    private int hari;
-    private boolean[] pemberianMakan;
-    private boolean[] pemberianObat;
-    private int jumlahIkanMati;
-    private boolean pembersihan;
+import ternak.lele.controllers.LoginController;
+import ternak.lele.helpers.DBHelper;
+import ternak.lele.helpers.GeneralHelper;
 
-    public Kolam(int idKolam, int hari, boolean[] pemberianMakan, boolean[] pemberianObat, int jumlahIkanMati, boolean pembersihan) {
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+public class Kolam extends LoginController {
+
+    public static final String TABLE = "kolams";
+
+    private int idKolam;
+    private int umur;
+    private int jumlahLele;
+
+    public Kolam(int idKolam, int umur, int jumlahLele) {
         this.idKolam = idKolam;
-        this.hari = hari;
-        this.pemberianMakan = pemberianMakan;
-        this.pemberianObat = pemberianObat;
-        this.jumlahIkanMati = jumlahIkanMati;
-        this.pembersihan = pembersihan;
+        this.umur = umur;
+        this.jumlahLele = jumlahLele;
+    }
+
+    public Kolam() {
+    }
+
+    public static Kolam getKolamById(int id) {
+        ResultSet resultSet = DBHelper.selectAll(TABLE, String.format("id = %d", id));
+        System.out.println(GeneralHelper.resultSetToString(resultSet));
+        Kolam kolam;
+
+        try {
+            int id_ = resultSet.getInt("id");
+            int umur_ = resultSet.getInt("umur");
+            int jumlahLele_ = resultSet.getInt("jumlah_lele");
+            kolam = new Kolam(id_, umur_, jumlahLele_);
+        } catch (Exception e) {
+            e.printStackTrace();
+            kolam = null;
+        }
+
+        return kolam;
+    }
+
+    public static ArrayList<Kolam> getAllKolam() {
+        ArrayList<Kolam> kolams = new ArrayList<Kolam>();
+        ResultSet resultSet = DBHelper.selectAll(TABLE);
+        try {
+            while (resultSet.next()) {
+                int id_ = resultSet.getInt("id");
+                int umur_ = resultSet.getInt("umur");
+                int jumlahLele_ = resultSet.getInt("jumlah_lele");
+                Kolam kolam = new Kolam(id_, umur_, jumlahLele_);
+                kolams.add(kolam);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return kolams;
     }
 
     public int getIdKolam() {
@@ -25,43 +67,19 @@ public class Kolam {
         this.idKolam = idKolam;
     }
 
-    public int getHari() {
-        return hari;
+    public int getUmur() {
+        return umur;
     }
 
-    public void setHari(int hari) {
-        this.hari = hari;
+    public void setUmur(int umur) {
+        this.umur = umur;
     }
 
-    public boolean[] getPemberianMakan() {
-        return pemberianMakan;
+    public int getJumlahLele() {
+        return jumlahLele;
     }
 
-    public void setPemberianMakan(boolean[] pemberianMakan) {
-        this.pemberianMakan = pemberianMakan;
-    }
-
-    public boolean[] getPemberianObat() {
-        return pemberianObat;
-    }
-
-    public void setPemberianObat(boolean[] pemberianObat) {
-        this.pemberianObat = pemberianObat;
-    }
-
-    public int getJumlahIkanMati() {
-        return jumlahIkanMati;
-    }
-
-    public void setJumlahIkanMati(int jumlahIkanMati) {
-        this.jumlahIkanMati = jumlahIkanMati;
-    }
-
-    public boolean isPembersihan() {
-        return pembersihan;
-    }
-
-    public void setPembersihan(boolean pembersihan) {
-        this.pembersihan = pembersihan;
+    public void setJumlahLele(int jumlahLele) {
+        this.jumlahLele = jumlahLele;
     }
 }

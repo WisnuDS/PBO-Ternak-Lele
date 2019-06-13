@@ -17,6 +17,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.YearMonth;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 
 /**
@@ -35,17 +37,17 @@ public class PeternakController implements Initializable {
     }
 
     @FXML
-    private void changeDashboardPanel(ActionEvent event){
+    private void changeDashboardPanel(ActionEvent event) {
         loadPanel("Dashboard");
     }
 
     @FXML
-    private void changePemeliharaanPanel(ActionEvent event){
+    private void changePemeliharaanPanel(ActionEvent event) {
         loadPanel("Pemeliharaan");
     }
 
     @FXML
-    private void logout(ActionEvent event){
+    private void logout(ActionEvent event) {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
 
@@ -60,7 +62,7 @@ public class PeternakController implements Initializable {
         stage.show();
     }
 
-    private void loadPanel(String panel){
+    private void loadPanel(String panel) {
         panel = "./../views/peternak/" + panel + ".fxml";
 
         Parent root = null;
@@ -72,5 +74,5 @@ public class PeternakController implements Initializable {
 
         mainParent.setCenter(root);
     }
-    
+
 }
