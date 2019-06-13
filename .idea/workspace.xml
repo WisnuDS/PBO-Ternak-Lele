@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="pembelian">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/controllers/PemeliharaanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/controllers/PemeliharaanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/controllers/PenjualanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/controllers/PenjualanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/helpers/GeneralHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/helpers/GeneralHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/models/Pemeliharaan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/models/Pemeliharaan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pemeliharaan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pemeliharaan.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/views/pemilik/Penjualan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/views/pemilik/Penjualan.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternak/lele/views/peternak/Pemeliharaan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/views/peternak/Pemeliharaan.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ternak/lele/controllers/PembelianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/controllers/PembelianController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pembelian.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pembelian.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,21 +82,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ternak/lele/views/peternak/Pemeliharaan.fxml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/PembelianController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="268" column="19" lean-forward="true" selection-end-line="271" />
+            <state relative-caret-position="120">
+              <caret line="181" column="94" selection-start-line="181" selection-start-column="94" selection-end-line="181" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/PemeliharaanController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="28" column="75" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="75" />
+            <state relative-caret-position="152">
+              <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5182#5183#0" expanded="true" />
@@ -114,68 +108,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ternak/lele/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pemeliharaan.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/PenjualanController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="77" column="79" lean-forward="true" selection-start-line="77" selection-start-column="79" selection-end-line="77" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ternak/lele/helpers/GeneralHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ternak/lele/views/pemilik/Penjualan.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -248,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/ternak/lele/models/Pembelian.java" />
         <option value="$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pembelian.fxml" />
         <option value="$PROJECT_DIR$/src/ternak/lele/helpers/DBHelper.java" />
-        <option value="$PROJECT_DIR$/src/ternak/lele/controllers/PembelianController.java" />
         <option value="$PROJECT_DIR$/src/ternak/lele/views/pemilik/Penjualan.fxml" />
         <option value="$PROJECT_DIR$/src/ternak/lele/controllers/PeternakController.java" />
         <option value="$PROJECT_DIR$/src/ternak/lele/views/peternak/Pemeliharaan.fxml" />
@@ -259,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/ternak/lele/helpers/GeneralHelper.java" />
         <option value="$PROJECT_DIR$/src/ternak/lele/Main.java" />
         <option value="$PROJECT_DIR$/src/ternak/lele/controllers/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/ternak/lele/controllers/PembelianController.java" />
       </list>
     </option>
   </component>
@@ -389,7 +321,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560443669002" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560445099787" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OS-Disk-Scheduling-Simulation/diskscheduling" />
@@ -549,7 +481,7 @@
       <workItem from="1560431509389" duration="1293000" />
       <workItem from="1560432841887" duration="56000" />
       <workItem from="1560432931726" duration="1197000" />
-      <workItem from="1560435702013" duration="7965000" />
+      <workItem from="1560435702013" duration="9390000" />
     </task>
     <task id="LOCAL-00001" summary="add Models">
       <created>1556176582636</created>
@@ -576,7 +508,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113871000" />
+    <option name="totallyTimeSpent" value="115296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -602,7 +534,7 @@
       <window_info anchor="bottom" id="Duplicate detector" weight="0.32847896" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32686085" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32686085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39967638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -613,7 +545,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.32903227" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32847896" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32847896" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Terminal" order="16" />
@@ -923,21 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/PembelianController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pembelian.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ternak/lele/helpers/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1016,7 +933,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pemeliharaan.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="244">
           <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
         </state>
       </provider>
@@ -1050,10 +967,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ternak/lele/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="77" column="79" lean-forward="true" selection-start-line="77" selection-start-column="79" selection-end-line="77" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ternak/lele/views/pemilik/Pembelian.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/PemeliharaanController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="28" column="75" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="75" />
+        <state relative-caret-position="152">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5182#5183#0" expanded="true" />
@@ -1064,17 +1003,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ternak/lele/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/PembelianController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ternak/lele/controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="77" column="79" lean-forward="true" selection-start-line="77" selection-start-column="79" selection-end-line="77" selection-end-column="79" />
+        <state relative-caret-position="120">
+          <caret line="181" column="94" selection-start-line="181" selection-start-column="94" selection-end-line="181" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

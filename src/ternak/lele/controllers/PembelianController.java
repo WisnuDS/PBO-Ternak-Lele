@@ -18,8 +18,11 @@ import javafx.stage.Popup;
 import javafx.stage.Stage;
 import ternak.lele.helpers.DBHelper;
 import ternak.lele.helpers.GeneralHelper;
+import ternak.lele.models.Penjualan;
 
 import javax.swing.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -158,5 +161,35 @@ public class PembelianController implements Initializable {
         } else {
             totalHargaField.setText("Rp -");
         }
+    }
+
+    @FXML
+    private JFXButton buttonExport;
+
+    @FXML
+    void exportData(ActionEvent event) {
+        String filename = "Data Penjualan.csv";
+        try {
+            FileWriter fw = new FileWriter(filename);
+            fw.append("No,Tanggal,Jenis Barang, Jumlah Barang, Harga per Unit, Total Harga\n");
+            ResultSet resultSet = DBHelper.selectAll("pembelian");
+            while (resultSet.next()) {
+                fw.append(resultSet.getInt("id") + ",");
+                fw.append(resultSet.getDate("tanggal").toString() + ",");
+                fw.append(resultSet.getString("barang") + ",");
+                fw.append(resultSet.getInt("jumlah") + ",");
+                fw.append(resultSet.getInt("harga_unit") + ",");
+                fw.append((resultSet.getInt("harga_unit") * resultSet.getInt("jumlah")) + "");
+                fw.append('\n');
+            }
+            fw.flush();
+            fw.close();
+            JOptionPane.showMessageDialog(null, "Data berhasil diexport");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
