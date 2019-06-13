@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="650.0" stylesheets="@../assets/pemeliharaan.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="650.0" stylesheets="@../assets/pemeliharaan.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ternak.lele.controllers.PemeliharaanController">
    <children>
       <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
          <children>
@@ -29,13 +29,13 @@
       </HBox>
       <JFXTabPane layoutY="50.0" pickOnBounds="false" prefHeight="550.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" tabMaxWidth="0.0">
          <tabs>
-            <Tab text="Status Kolam 1">
+            <Tab fx:id="buttonLihat1" text="Status Kolam 1">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Pane layoutX="31.0" layoutY="24.0" prefHeight="58.0" prefWidth="168.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
                            <children>
-                              <JFXComboBox layoutX="86.0" layoutY="17.0" />
+                              <JFXComboBox fx:id="hariBox1" layoutX="86.0" layoutY="17.0" />
                               <Label layoutX="14.0" layoutY="19.0" text="Pilih Hari :">
                                  <font>
                                     <Font size="14.0" />
@@ -43,7 +43,7 @@
                               </Label>
                            </children>
                         </Pane>
-                        <JFXButton layoutX="213.0" layoutY="35.0" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Lihat" textFill="WHITE">
+                        <JFXButton fx:id="lihatButton1" layoutX="213.0" layoutY="35.0" onAction="#getData1" onSelectionChanged="#getData1" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Lihat" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -113,7 +113,7 @@
                      <children>
                         <Pane layoutX="31.0" layoutY="24.0" prefHeight="58.0" prefWidth="168.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
                            <children>
-                              <JFXComboBox layoutX="86.0" layoutY="17.0" />
+                              <JFXComboBox fx:id="hariBox2" layoutX="86.0" layoutY="17.0" />
                               <Label layoutX="14.0" layoutY="19.0" text="Pilih Hari :">
                                  <font>
                                     <Font size="14.0" />
@@ -121,7 +121,7 @@
                               </Label>
                            </children>
                         </Pane>
-                        <JFXButton layoutX="213.0" layoutY="35.0" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Lihat" textFill="WHITE">
+                        <JFXButton fx:id="lihatButton1" layoutX="213.0" layoutY="35.0" onSelectionChanged="#getData2" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Lihat" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -192,7 +192,7 @@
                      <children>
                         <Pane layoutX="31.0" layoutY="24.0" prefHeight="58.0" prefWidth="168.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
                            <children>
-                              <JFXComboBox layoutX="86.0" layoutY="17.0" />
+                              <JFXComboBox fx:id="hariBox3" layoutX="86.0" layoutY="17.0" />
                               <Label layoutX="14.0" layoutY="19.0" text="Pilih Hari :">
                                  <font>
                                     <Font size="14.0" />
@@ -200,7 +200,7 @@
                               </Label>
                            </children>
                         </Pane>
-                        <JFXButton layoutX="213.0" layoutY="35.0" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Lihat" textFill="WHITE">
+                        <JFXButton fx:id="lihatButton1" layoutX="213.0" layoutY="35.0" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #41545e;" text="Lihat" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

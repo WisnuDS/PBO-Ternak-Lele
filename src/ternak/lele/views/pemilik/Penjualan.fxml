@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ternak.lele.controllers.PenjualanController">
    <children>
       <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
          <children>
@@ -26,7 +26,7 @@
       </HBox>
       <Pane layoutY="50.0" prefHeight="550.0" prefWidth="650.0">
          <children>
-            <JFXTextField layoutX="90.0" layoutY="182.0" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Ikan">
+            <JFXTextField fx:id="jumlahIkanField" layoutX="90.0" layoutY="182.0" onKeyReleased="#totalChangeAction" prefHeight="25.0" prefWidth="469.0" promptText="Jumlah Ikan">
                <font>
                   <Font size="16.0" />
                </font>
@@ -36,7 +36,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="90.0" layoutY="243.0" prefHeight="25.0" prefWidth="469.0" promptText="Harga / ekor">
+            <JFXTextField fx:id="hargaIkanField" layoutX="90.0" layoutY="243.0" onKeyReleased="#totalChangeAction" prefHeight="25.0" prefWidth="469.0" promptText="Harga / ekor">
                <font>
                   <Font size="16.0" />
                </font>
@@ -46,12 +46,12 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="470.0" layoutY="307.0" text="Rp -">
+            <Label fx:id="hargaLabel" layoutX="470.0" layoutY="307.0" text="Rp -">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXButton layoutX="470.0" layoutY="374.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #41545e;" text="Done" textFill="WHITE">
+            <JFXButton fx:id="doneButton" layoutX="470.0" layoutY="374.0" onAction="#penjualanIkanAction" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #41545e;" text="Done" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>

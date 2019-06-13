@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="650.0" stylesheets="@../assets/pemeliharaan.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="650.0" stylesheets="@../assets/pemeliharaan.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ternak.lele.controllers.PemeliharaanController">
    <children>
       <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
          <children>
@@ -35,7 +35,7 @@
                      <children>
                         <Pane layoutX="31.0" layoutY="24.0" prefHeight="58.0" prefWidth="168.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
                            <children>
-                              <JFXComboBox layoutX="86.0" layoutY="17.0" />
+                              <JFXComboBox fx:id="hariBox1" layoutX="86.0" layoutY="17.0"/>
                               <Label layoutX="14.0" layoutY="19.0" text="Pilih Hari :">
                                  <font>
                                     <Font size="14.0" />
@@ -113,7 +113,7 @@
                      <children>
                         <Pane layoutX="31.0" layoutY="24.0" prefHeight="58.0" prefWidth="168.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
                            <children>
-                              <JFXComboBox layoutX="86.0" layoutY="17.0" />
+                              <JFXComboBox fx:id="hariBox2" layoutX="86.0" layoutY="17.0" />
                               <Label layoutX="14.0" layoutY="19.0" text="Pilih Hari :">
                                  <font>
                                     <Font size="14.0" />
@@ -192,7 +192,7 @@
                      <children>
                         <Pane layoutX="31.0" layoutY="24.0" prefHeight="58.0" prefWidth="168.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
                            <children>
-                              <JFXComboBox layoutX="86.0" layoutY="17.0" />
+                              <JFXComboBox fx:id="hariBox3" layoutX="86.0" layoutY="17.0" />
                               <Label layoutX="14.0" layoutY="19.0" text="Pilih Hari :">
                                  <font>
                                     <Font size="14.0" />
