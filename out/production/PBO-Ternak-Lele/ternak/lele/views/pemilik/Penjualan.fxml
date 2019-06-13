@@ -56,7 +56,7 @@
                   <Font size="16.0" />
                </font>
             </JFXButton>
-            <JFXComboBox layoutX="504.0" layoutY="120.0" />
+            <JFXComboBox fx:id="kolamBox" layoutX="504.0" layoutY="120.0" />
             <Label layoutX="91.0" layoutY="123.0" text="Nomor Kolam :">
                <font>
                   <Font size="16.0" />

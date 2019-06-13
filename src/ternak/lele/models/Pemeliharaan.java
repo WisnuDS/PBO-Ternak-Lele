@@ -4,7 +4,10 @@ import org.json.JSONObject;
 import ternak.lele.helpers.DBHelper;
 import ternak.lele.helpers.GeneralHelper;
 
+import javax.swing.*;
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Pemeliharaan {
 
@@ -36,12 +39,32 @@ public class Pemeliharaan {
         ResultSet resultSet = DBHelper.selectAll(TABLE, String.format("id = %d", id));
         try {
             if(resultSet.next()){
-                JSONObject data = GeneralHelper.resultSetToJson(resultSet);
                 int id_ = resultSet.getInt("id");
                 int idKolam_ = resultSet.getInt("id_kolam");
                 int hari_ = resultSet.getInt("hari");
-                boolean[] pemberianMakan_ = GeneralHelper.getBooleanArrayFromJson(data, "pemberian_makan");
-                boolean[] pemberianObat_ = GeneralHelper.getBooleanArrayFromJson(data, "pemberian_obat");
+                int ikanMati_ = resultSet.getInt("ikan_mati");
+                boolean pembersihan_ = resultSet.getBoolean("pembersihan");
+                boolean[] pemberianMakan_ = GeneralHelper.stringToBooleanArray(resultSet.getString("pemberian_makan"));
+                boolean[] pemberianObat_ = GeneralHelper.stringToBooleanArray(resultSet.getString("pemberian_obat"));
+                pemeliharaan = new Pemeliharaan(id_, idKolam_, hari_, pemberianMakan_, pemberianObat_, ikanMati_, pembersihan_);
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return pemeliharaan;
+    }
+
+    public static Pemeliharaan getPemeliharaanByHari(int kolam, int hari){
+        Pemeliharaan pemeliharaan = null;
+        ResultSet resultSet = DBHelper.selectAll(TABLE, String.format("id_kolam = %d AND hari = %s",kolam, hari));
+        try {
+            if(resultSet.next()){
+                int id_ = resultSet.getInt("id");
+                int idKolam_ = resultSet.getInt("id_kolam");
+                int hari_ = resultSet.getInt("hari");
+                boolean[] pemberianMakan_ = GeneralHelper.stringToBooleanArray(resultSet.getString("pemberian_makan"));
+                boolean[] pemberianObat_ = GeneralHelper.stringToBooleanArray(resultSet.getString("pemberian_obat"));
                 int ikanMati_ = resultSet.getInt("ikan_mati");
                 boolean pembersihan_ = resultSet.getBoolean("pembersihan");
                 pemeliharaan = new Pemeliharaan(id_, idKolam_, hari_, pemberianMakan_, pemberianObat_, ikanMati_, pembersihan_);
@@ -51,6 +74,84 @@ public class Pemeliharaan {
         }
 
         return pemeliharaan;
+    }
+
+    public static boolean createDataPemeliharaan(int kolam, int hari, boolean[] makan, boolean[] obat, int jumlahMati, boolean pembersihan){
+        String makans = "'[";
+        for(boolean m : makan){
+            makans += m ? "1" : "0";
+            makans += ",";
+        }
+        makans = makans.substring(0, makans.length()-1);
+        makans += "]'";
+
+        String obats = "'[";
+        for(boolean o : obat){
+            obats += o ? "1" : "0";
+            obats += ",";
+        }
+        obats = obats.substring(0, obats.length()-1);
+        obats += "]'";
+
+        int jumlah = 0;
+        try {
+            ResultSet resultSet = DBHelper.selectColumn("kolams", new String[]{"jumlah_lele"}, "id = 1");
+            resultSet.next();
+            jumlah = resultSet.getInt("jumlah_lele") - jumlahMati;
+        } catch (Exception e) {
+            return false;
+        }
+        Map<String, String> params1 = new HashMap<String, String>();
+        params1.put("jumlah_lele", jumlah + "");
+        DBHelper.update("kolams", params1, "id = " + kolam);
+
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("id_kolam", kolam + "");
+        params.put("hari", hari + "");
+        params.put("pemberian_makan", makans);
+        params.put("pemberian_obat", obats);
+        params.put("ikan_mati", jumlahMati + "");
+        params.put("pembersihan", pembersihan ? "1" : "0");
+        return DBHelper.insert("pemeliharaans", params);
+    }
+
+    public static boolean updateDataPemeliharaan(int kolam, int hari, boolean[] makan, boolean[] obat, int jumlahMati, boolean pembersihan){
+        String makans = "'[";
+        for(boolean m : makan){
+            makans += m ? "1" : "0";
+            makans += ",";
+        }
+        makans = makans.substring(0, makans.length()-1);
+        makans += "]'";
+
+        String obats = "'[";
+        for(boolean o : obat){
+            obats += o ? "1" : "0";
+            obats += ",";
+        }
+        obats = obats.substring(0, obats.length()-1);
+        obats += "]'";
+
+        int jumlah = 0;
+        try {
+            ResultSet resultSet = DBHelper.selectColumn("kolams", new String[]{"jumlah_lele"}, "id = 1");
+            resultSet.next();
+            jumlah = resultSet.getInt("jumlah_lele") - jumlahMati;
+        } catch (Exception e) {
+            return false;
+        }
+        Map<String, String> params1 = new HashMap<String, String>();
+        params1.put("jumlah_lele", jumlah + "");
+        DBHelper.update("kolams", params1, "id = " + kolam);
+
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("id_kolam", kolam + "");
+        params.put("hari", hari + "");
+        params.put("pemberian_makan", makans);
+        params.put("pemberian_obat", obats);
+        params.put("ikan_mati", jumlahMati + "");
+        params.put("pembersihan", pembersihan ? "1" : "0");
+        return DBHelper.update("pemeliharaans", params, String.format("id_kolam = %s AND hari = %s", kolam, hari));
     }
 
     public int getId() {

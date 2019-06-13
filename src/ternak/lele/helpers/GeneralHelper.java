@@ -4,6 +4,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import javax.xml.bind.DatatypeConverter;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 
 public class GeneralHelper {
@@ -21,6 +24,7 @@ public class GeneralHelper {
             }
         } catch (Exception e) {
         }
+        System.out.println(jsonArray.toString());
         return jsonArray.toString();
     }
 
@@ -62,6 +66,29 @@ public class GeneralHelper {
             return true;
         }catch (Exception e){
             return false;
+        }
+    }
+
+    public static boolean[] stringToBooleanArray(String s){
+        s = s.substring(1, s.length()-1);
+        String data[] = s.split(",");
+        boolean[] res = new boolean[data.length];
+        for(int i=0; i<data.length; i++){
+            res[i] = data[i].equals("1") ? true : false;
+        }
+        return res;
+    }
+
+    public static String stringToMD5(String s){
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(s.getBytes());
+            byte[] digest = md.digest();
+            String myHash = DatatypeConverter.printHexBinary(digest);
+            return myHash;
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }

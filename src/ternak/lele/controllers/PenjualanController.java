@@ -1,23 +1,32 @@
 package ternak.lele.controllers;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import ternak.lele.helpers.DBHelper;
 import ternak.lele.helpers.GeneralHelper;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
+import java.net.URL;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ResourceBundle;
 
-public class PenjualanController {
+public class PenjualanController implements Initializable {
 
     @FXML
     private JFXTextField jumlahIkanField;
+
+    @FXML
+    private JFXComboBox<Integer> kolamBox;
 
     @FXML
     private JFXTextField hargaIkanField;
@@ -30,11 +39,11 @@ public class PenjualanController {
 
     @FXML
     void penjualanIkanAction(ActionEvent event) {
-        boolean status = pembelianBarang(jumlahIkanField, hargaIkanField, "'Bibit'");
+        boolean status = penjualanBarang(jumlahIkanField, hargaIkanField);
         if (status) {
             int jumlah = 0;
             try {
-                ResultSet resultSet = DBHelper.selectColumn("kolams", new String[]{"jumlah_lele"}, "id = 1");
+                ResultSet resultSet = DBHelper.selectColumn("kolams", new String[]{"jumlah_lele"}, "id = " + kolamBox.getValue());
                 resultSet.next();
                 jumlah = resultSet.getInt("jumlah_lele") - Integer.parseInt(jumlahIkanField.getText());
             } catch (Exception e) {
@@ -44,8 +53,7 @@ public class PenjualanController {
             }
             Map<String, String> params = new HashMap<String, String>();
             params.put("jumlah_lele", jumlah + "");
-            DBHelper.update("kolams", params, "id = 1");
-
+            DBHelper.update("kolams", params, "id = " + kolamBox.getValue());
 
             String message = "Data berhasil dimasukan";
             JOptionPane.showMessageDialog(null, message);
@@ -69,14 +77,19 @@ public class PenjualanController {
         }
     }
 
-    private boolean pembelianBarang(JFXTextField jumlahField, JFXTextField hargaField, String category) {
+    private boolean penjualanBarang(JFXTextField jumlahField, JFXTextField hargaField) {
         Map<String, String> params = new HashMap<String, String>();
         params.put("jumlah", jumlahField.getText());
-        params.put("harga_unit", hargaField.getText());
-        params.put("barang", category);
-        boolean status = DBHelper.insert("pembelian", params);
+        params.put("harga", hargaField.getText());
+        boolean status = DBHelper.insert("penjualan", params);
 
         return status;
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ObservableList<Integer> data = FXCollections.observableArrayList(1,2,3);
+        kolamBox.setItems(data);
+        kolamBox.setValue(1);
+    }
 }

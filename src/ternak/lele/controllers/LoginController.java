@@ -7,6 +7,8 @@ package ternak.lele.controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,9 +30,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import ternak.lele.helpers.Config;
 import ternak.lele.helpers.DBConnection;
+import ternak.lele.helpers.GeneralHelper;
 import ternak.lele.models.Kolam;
 import ternak.lele.models.Pemeliharaan;
 import ternak.lele.models.User;
+
+import javax.swing.*;
 
 /**
  *
@@ -63,17 +68,14 @@ public class LoginController implements Initializable {
 //        int aktor = getLoginAktor(username, password);
 
 //        int aktor = User.getLoginValue(connection, preparedStatement, resultSet, username, password);
-        int aktor = User.getLoginValue(username, password);
-        User.getUser(1);
-
-        System.out.println(aktor);
+        int aktor = User.getLoginValue(username, GeneralHelper.stringToMD5(password));
 
         if(aktor == 1){
             changePage(event, "pemilik");
         } else if (aktor == 2){
             changePage(event, "peternak");
         } else {
-            System.out.println("Username dan password salah");
+            JOptionPane.showMessageDialog(null, "Username dan password salah");
         }
     }
 

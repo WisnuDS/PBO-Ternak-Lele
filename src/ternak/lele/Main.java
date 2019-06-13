@@ -7,6 +7,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import ternak.lele.helpers.DBHelper;
+import ternak.lele.helpers.GeneralHelper;
+import ternak.lele.models.Pemeliharaan;
 
 import java.sql.ResultSet;
 import java.util.HashMap;
@@ -23,6 +25,10 @@ public class Main extends Application {
 //        test.put("harga_unit", "1000");
 //        test.put("barang", "'Bibit  '");
 //        DBHelper.update("pembelian", test, "id = 1");
+
+//        System.out.println(((new Gson()).toJson(Pemeliharaan.getPemeliharaanByHari(1, 1))));
+
+//        System.out.println(GeneralHelper.stringToMD5("asd").toLowerCase());
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
