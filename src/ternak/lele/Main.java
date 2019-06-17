@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import ternak.lele.helpers.DBHelper;
 import ternak.lele.helpers.GeneralHelper;
+import ternak.lele.models.Pembelian;
 import ternak.lele.models.Pemeliharaan;
 
 import java.sql.ResultSet;
@@ -29,6 +30,8 @@ public class Main extends Application {
 //        System.out.println(((new Gson()).toJson(Pemeliharaan.getPemeliharaanByHari(1, 1))));
 
 //        System.out.println(GeneralHelper.stringToMD5("asd").toLowerCase());
+
+//        System.out.println(Pembelian.getAllPembelian().size());
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

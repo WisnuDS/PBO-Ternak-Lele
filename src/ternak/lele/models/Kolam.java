@@ -26,10 +26,10 @@ public class Kolam extends LoginController {
 
     public static Kolam getKolamById(int id) {
         ResultSet resultSet = DBHelper.selectAll(TABLE, String.format("id = %d", id));
-        System.out.println(GeneralHelper.resultSetToString(resultSet));
         Kolam kolam;
 
         try {
+            resultSet.next();
             int id_ = resultSet.getInt("id");
             int umur_ = resultSet.getInt("umur");
             int jumlahLele_ = resultSet.getInt("jumlah_lele");

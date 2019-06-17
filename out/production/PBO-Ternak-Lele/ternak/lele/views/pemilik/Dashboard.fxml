@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.AreaChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ternak.lele.controllers.DashboardController">
    <children>
       <HBox prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #41545e;">
          <children>
@@ -26,17 +26,24 @@
       </HBox>
       <VBox layoutX="25.0" layoutY="72.0" prefHeight="254.0" prefWidth="600.0" style="-fx-background-color: #fafafa; -fx-background-radius: 10;">
          <children>
-            <AreaChart prefWidth="580.0" title="Grafik Ikan">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis side="LEFT" />
-              </yAxis>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Log Pembelian dan Penjualan" textAlignment="CENTER" wrappingWidth="597.7294921875">
+               <font>
+                  <Font size="19.0" />
+               </font>
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" />
                </VBox.margin>
-            </AreaChart>
+            </Text>
+            <JFXTreeTableView fx:id="tableLog">
+               <columns>
+                  <TreeTableColumn fx:id="noColumn" prefWidth="52.0" text="No" />
+                  <TreeTableColumn fx:id="tanggalColumn" prefWidth="116.0" text="Tanggal" />
+                  <TreeTableColumn fx:id="jenisColumn" prefWidth="108.0" text="Jenis Barang" />
+                  <TreeTableColumn fx:id="hargaColumn" prefWidth="103.0" text="Harga" />
+                  <TreeTableColumn fx:id="jumlahColumn" prefWidth="82.0" text="Jumlah" />
+                  <TreeTableColumn fx:id="totalColumn" prefWidth="138.0" text="Total" />
+               </columns>
+            </JFXTreeTableView>
          </children>
       </VBox>
       <HBox layoutX="25.0" layoutY="347.0" prefHeight="91.0" prefWidth="600.0">
@@ -46,7 +53,7 @@
                   <Insets right="15.0" />
                </HBox.margin>
                <children>
-                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Ikan Hidup" textAlignment="CENTER" textFill="WHITE">
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Ikan Kolam 1" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -54,9 +61,9 @@
                         <Insets />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="ikanHidupLabel" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="123 ekor">
+                  <Label fx:id="ikanKolam1" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="123 ekor">
                      <font>
-                        <Font size="22.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                </children>
@@ -66,14 +73,14 @@
                   <Insets left="15.0" right="15.0" />
                </HBox.margin>
                <children>
-                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Ikan Mati" textAlignment="CENTER" textFill="WHITE">
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Ikan Kolam 2" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ikanHidupLabel1" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="123 ekor">
+                  <Label fx:id="ikanKolam2" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="123 ekor">
                      <font>
-                        <Font size="22.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                </children>
@@ -83,14 +90,72 @@
                   <Insets left="15.0" />
                </HBox.margin>
                <children>
-                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Pakan" textAlignment="CENTER" textFill="WHITE">
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Ikan Kolam 3" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ikanHidupLabel2" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="12 kg">
+                  <Label fx:id="ikanKolam3" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="12 kg">
                      <font>
-                        <Font size="22.0" />
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="25.0" layoutY="458.0" prefHeight="91.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="166.0" prefWidth="180.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+               <children>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Jumlah Ikan" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="totalKolam" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="123 ekor">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </HBox.margin>
+               <children>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Jumlah Ikan Mati" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalIkanMati" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="123 ekor">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <children>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #41545e; -fx-background-radius: 10 10;" text="Jumlah Pakan" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="jumlahPakan" alignment="CENTER" prefHeight="44.0" prefWidth="257.0" text="12 kg">
+                     <font>
+                        <Font size="18.0" />
                      </font>
                   </Label>
                </children>

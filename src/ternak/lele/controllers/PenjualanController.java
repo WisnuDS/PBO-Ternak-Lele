@@ -45,6 +45,11 @@ public class PenjualanController implements Initializable {
             try {
                 ResultSet resultSet = DBHelper.selectColumn("kolams", new String[]{"jumlah_lele"}, "id = " + kolamBox.getValue());
                 resultSet.next();
+                if(resultSet.getInt("jumlah_lele") < Integer.parseInt(jumlahIkanField.getText())){
+                    String message = "Terjadi error";
+                    JOptionPane.showMessageDialog(null, message);
+                    return;
+                }
                 jumlah = resultSet.getInt("jumlah_lele") - Integer.parseInt(jumlahIkanField.getText());
             } catch (Exception e) {
                 String message = "Terjadi error";
