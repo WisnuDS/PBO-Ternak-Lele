@@ -1,5 +1,7 @@
 package ternak.lele.helpers;
 
+import com.company.database.DBConection;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -85,6 +87,18 @@ public class DBHelper {
             }
         }
         sql += " WHERE " + clause;
+        System.out.println(sql);
+        try {
+            Statement statement = Config.connection.createStatement();
+            return statement.executeUpdate(sql) > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static boolean delete(String table, String clause){
+        String sql = String.format("DELETE FROM %s WHERE %s ;",table,clause);
         System.out.println(sql);
         try {
             Statement statement = Config.connection.createStatement();
